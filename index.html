@@ -38,7 +38,10 @@
                 <a class="nav-link" href="pages/contact.html">Support</a>
             </div>
 
-            <div class = "home-page-wrap">
+
+
+
+            <div id="main-wrap" class = "home-page-wrap">
                 <div class = "image">
                     <img src = "images/beach.jpg" alt = "beach picture"/>
                     <div class = "centered-quote">
@@ -50,74 +53,22 @@
                     </div>
                 </div>
                 <div class = "home-content">
-                    <!---
-                    <div class = "icon-links-flex">
-
-                        <div class = "package-deals icon-link-wrap">
-                            <a href = "pages/package_deals.html">
-                                <div class = "icon">
-                                    <i class="fas fa-tags"></i>
-                                </div>
-                                <header>
-                                    <h1>Current Deals</h1>
-                                </header>
-                                <div class = "icon-link-description">
-                                    <p>Deals for your dream vacation</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class = "destination icon-link-wrap">
-                            <a href = "pages/destinations.html">
-                                <div class = "icon">
-                                    <i class="fas fa-map-marked"></i>
-                                </div>
-                                <header>
-                                    <h1>Destinations</h1>
-                                </header>
-                                <div class = "icon-link-description">
-                                    <p>View our destinations</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class = "cruises icon-link-wrap">
-                            <a href = "pages/destinations.html">
-                                <div class = "icon">
-                                    <i class="fas fa-anchor"></i>
-                                </div>
-                                <header>
-                                    <h1>View Cruises</h1>
-                                </header>
-                                <div class = "icon-link-description">
-                                    <p>View our cruises</p>
-                                </div>
-                            </a>
-                        </div>
-                        
-                    </div>
-                    -->
+                    <!--HIDE THIS WITH MY RESULTS-->
                     <div id = "search-results" class = "display-search-results">
-
                     </div>
                     <div class = "seasonal-favorites">
                         <header>
-                            <h1>Traveler Favorites</h1>
+                            <h1>Popular Recipes</h1>
                         </header>
                         <div class = "favorites-intro">
-                            <p>Planning a getaway? Check out the most popular destinations</p>
+                            <p>Can't decide on a meal? Check out our most popular recipes!</p>
                         </div>
                         <div class = "destination-info">
-                            <a href = "pages/destinations.html">
-                                <div class = "costa picture">
-                                    <img src = "images/costa.jpg" alt = "Cancun">
-                                    <div class = "place-info">
-                                        <p>Costa Rica</p>
-                                        <p>Discover the rainforest</p>
-                                    </div>
+                            <div class = "costa picture">
+                                <div id="randomRecipeResults">
                                 </div>
-                            </a>
-                            <a href = "pages/destinations.html">
+                            </div>
+                            <!--<a href = "pages/destinations.html">
                                 <div class = "dc picture">
                                     <img src = "images/dc.jpg" alt = "Cancun">
                                     <div class = "place-info">
@@ -143,10 +94,14 @@
                                         <p>Enjoy the best of Europe</p>
                                     </div>
                                 </div>
-                            </a>
+                            </a>-->
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="recipe-body">
+                <!--Set top div display to none and populate page with this-->
+                <!--Make button with -->
             </div>
             <footer>
                 <div class = "footer-flex">
@@ -182,5 +137,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src = "script/foodSearch.js"></script>
+        <script src = "script/randomMeals.js"></script>
     </body>
 </html>
