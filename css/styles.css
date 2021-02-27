@@ -45,16 +45,43 @@ a:hover {
 
 .image img {
     width: 100%;
-    max-height: 600px;
+    max-height: 400px;
 }
 
 .centered-quote {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 100%;
     transform: translate(-50%, -50%);
-    font-size: 60px;
-    color: white;
+    font-size: 16px;
+    color: black;
+    padding: 45px 60px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px grey;
+}
+
+.centered-quote input {
+    outline: none;
+    border: 1px solid grey;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.centered-quote h3 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+#submitSearch {
+    margin-left: 15px;
+    cursor: pointer;
+    background-color: rgb(56, 173, 235);
+}
+
+.display-search-results {
+    text-align: center;
 }
 
 .home-content {
@@ -539,20 +566,12 @@ h1 {
         margin-top: 25px;
     }
 
-    .centered-quote {
-        font-size: 50px;
-    }
-
     .header-small h1{
         font-size: 40px;
     }
 }
 
 @media (max-width:736px){
-    .centered-quote {
-        font-size: 30px;
-    }
-
     .icon-links-flex h1 {
         font-size: 28px !important;
     }
@@ -637,9 +656,7 @@ h1 {
 }
 
 @media (max-width:402px){
-    .centered-quote {
-        font-size: 20px;
-    }
+
 
     .header-small h1{
         font-weight: bold;

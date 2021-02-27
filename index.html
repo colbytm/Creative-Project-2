@@ -41,9 +41,16 @@
             <div class = "home-page-wrap">
                 <div class = "image">
                     <img src = "images/beach.jpg" alt = "beach picture"/>
-                    <div class = "centered-quote">Paradise Awaits</div>
+                    <div class = "centered-quote">
+                        <h3>Search for food</h3>
+                        <form>
+                            <input type = "text" name = "foodSearch" id = "foodSearch"/>
+                            <input type = "submit" name = "submitSearch" id = "submitSearch"/>
+                        </form>
+                    </div>
                 </div>
                 <div class = "home-content">
+                    <!---
                     <div class = "icon-links-flex">
 
                         <div class = "package-deals icon-link-wrap">
@@ -88,6 +95,10 @@
                             </a>
                         </div>
                         
+                    </div>
+                    -->
+                    <div id = "search-results" class = "display-search-results">
+
                     </div>
                     <div class = "seasonal-favorites">
                         <header>
@@ -166,12 +177,10 @@
                 </div>
                 <a href="https://icons8.com/icons/set/suitcase" target="_blank" >Suitcase icon icon by </a><a target="_blank" href="https://icons8.com">Icons8</a>
             </footer>
-
-
-
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src = "script/foodSearch.js"></script>
     </body>
 </html>
