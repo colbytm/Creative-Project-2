@@ -2,6 +2,7 @@
 let submitButton = document.getElementById("submitSearch");
 let searchResultsDiv = document.getElementById("search-results");
 
+
 // click listener for submit button
 submitButton.addEventListener("click", function(event){
     // prevent default action for the form
@@ -40,8 +41,15 @@ const sendRequest = searchVal => {
 
 const displayResults = results => {
     // create image and image url- append to child of results div
-    let foodImg = document.createElement("img");
-    let imgSrc = results.meals[0].strMealThumb;
-    foodImg.src = imgSrc;
-    searchResultsDiv.appendChild(foodImg);
+    let dispResults = "";
+    dispResults += "<div class = recipeDivWrap>";
+    dispResults += "<div class = recipeImg>"
+    dispResults += "<img src = " + results.meals[0].strMealThumb + " alt = food picture>";
+    dispResults += "</div>"
+    dispResults += "</div>"
+
+
+    searchResultsDiv.innerHTML = dispResults;
+
 }
+
