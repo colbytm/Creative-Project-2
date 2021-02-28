@@ -31,6 +31,13 @@ a:hover {
 
 .icon-title-flex {
     display: flex;
+    align-items: center;
+}
+
+.brand-icon i {
+    font-size: 25px;
+    color: rgb(233, 48, 48);
+    margin-right: 10px;
 }
 
 .navbar-collapse a{
@@ -41,7 +48,7 @@ a:hover {
 .image {
     text-align: center;
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .image img {
@@ -59,7 +66,7 @@ a:hover {
     color: black;
     padding: 25px 60px;
     background-color: rgb(255, 255, 255);
-    opacity: 0.7;
+    opacity: 0.8;
     border-radius: 5px;
     box-shadow: 0 0 10px grey;
 }
@@ -82,16 +89,22 @@ a:hover {
     font-weight: bold;
 }
 
+#foodSearch {
+    opacity: 1 !important;
+}
+
 #submitSearch {
     margin-left: 15px;
     cursor: pointer;
-    background-color: rgb(56, 173, 235);
+    background-color: rgb(112,130,56);
+    color: white;
+    opacity: 1 !important;
 }
-
 
 /* Display results */
 .display-search-results {
-    max-width: 900px;
+    display: none;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -110,6 +123,11 @@ a:hover {
 
 .recipe-info h4 {
     margin-bottom: 20px;
+}
+
+.recipe-flex h2 {
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 /* End display results */
@@ -172,7 +190,11 @@ a:hover {
 
 .picture {
     transition: all 0.2s ease-in;
+}
 
+.picture:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px grey;
 }
 
 .destination-info a:hover .picture{
@@ -190,7 +212,7 @@ a:hover {
 
 .place-info {
     padding: 15px;
-    background-color: rgb(56, 173, 235);
+    background-color: rgb(112,130,56);
 }
 
 
