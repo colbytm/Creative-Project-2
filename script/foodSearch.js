@@ -45,3 +45,4 @@ const displayResults = results => {
     foodImg.src = imgSrc;
     searchResultsDiv.appendChild(foodImg);
 }
+
