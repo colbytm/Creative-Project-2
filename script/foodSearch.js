@@ -18,10 +18,34 @@ submitButton.addEventListener("click", function(event){
     const searchValue = document.getElementById("foodSearch").value;
 
     // if value is not empty call send request function
-    if(searchValue !== ""){
+    if(searchValue === "random"){
+        searchRandom();
+    }
+    else if(searchValue !== ""){
         sendRequest(searchValue);
     }
 });
+
+
+const searchRandom = () => {
+    // create url
+    const url = "https://www.themealdb.com/api/json/v1/1/random.php"
+    fetch(url)
+    .then(function(response){
+        // if response wasn't successful return error
+        if(response.status != 200){
+            return {
+                text: "Error calling the Numbers API service: " + response.statusText
+            }
+        }
+        return response.json();
+    }).then(function(json){
+
+        console.log(json);
+        // display results
+        displayResults(json);
+    });
+}
 
 
 const sendRequest = searchVal => {
@@ -37,6 +61,9 @@ const sendRequest = searchVal => {
         }
         return response.json();
     }).then(function(json){
+        if(json.meals === null){
+            displayError();
+        }
         console.log(json);
         // display results
         displayResults(json);
@@ -73,7 +100,7 @@ const getIngredients = results =>{
     for(var key in results.meals[0]){
         let val = results.meals[0][key];
         if(key.includes(ingredientLocation)){
-            if(val !== ""){
+            if(val !== "" && val !== null){
                 arr.push(val);
             }
         }
@@ -87,12 +114,18 @@ const getMeasurements = results =>{
     for(var key in results.meals[0]){
         let val = results.meals[0][key];
         if(key.includes(measureLocation)){
-            if(val !== ""){
+            if(val !== "" && val !== null){
                 arr.push(val);
             }
         }
     }
     return arr;
+}
+
+const displayError = () =>{
+    searchResultsDiv.scrollIntoView();
+    searchResultsDiv.style.display = "block";
+    searchResultsDiv.innerHTML = "No results found. Please refresh page and try searching again";
 }
 
 // POPULAR RECIPES
